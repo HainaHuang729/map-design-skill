@@ -1,0 +1,27 @@
+/* Hangzhou reference palette. Adapt these values for the target city. */
+:root {
+  --map-land: #f0f2e8;
+  --map-wood: #dfe8d2;
+  --map-park: #d2dfbd;
+  --map-water: #bbd8cc;
+  --map-surface: #fffef9;
+  --map-primary: #356d63;
+  --map-accent: #aa792a;
+  --map-ink: #293c35;
+  --map-muted: #677969;
+  --map-border: #dce5d7;
+  --map-shadow: rgba(30, 65, 45, .09);
+}
+[data-map-theme="dark"] {
+  --map-land: #26372f;
+  --map-wood: #304634;
+  --map-park: #344b38;
+  --map-water: #31574f;
+  --map-surface: #26352e;
+  --map-primary: #a5cbb9;
+  --map-accent: #dfbb70;
+  --map-ink: #edf0e5;
+  --map-muted: #b1c2af;
+  --map-border: #475c4c;
+  --map-shadow: rgba(7, 17, 10, .24);
+}

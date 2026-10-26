@@ -1,0 +1,4 @@
+interface:
+  display_name: "地图设计"
+  short_description: "全屏地图、城市配色、地标优先和轻量交互的可复用设计规范"
+  default_prompt: "使用 $map-design，参考杭州慢游的布局与地标优先规则，为指定城市设计一张有当地配色的精简互动地图。"
