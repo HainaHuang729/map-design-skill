@@ -45,6 +45,30 @@
 
 地图署名：OpenFreeMap · OpenMapTiles · © OpenStreetMap contributors。地理数据采用 ODbL，详见 [来源说明](NOTICE.md)。
 
+## 更多城市参考
+
+新增4座城市、8张参考图。每城选6处地点，桌面图（1440×900）展示整体布局，手机图（390×844）展示地点介绍。上海采用夜色，其余采用浅色；所有示例均支持浅深切换。
+
+| 苏州 · 园林与水巷 | 上海 · 江岸与街区 |
+| --- | --- |
+| ![苏州桌面地图](map-design/assets/cities/suzhou-desktop.png) | ![上海桌面夜色地图](map-design/assets/cities/shanghai-desktop.png) |
+| [查看手机图](map-design/assets/cities/suzhou-mobile.png) · 粉墙灰白、水巷青、竹绿 | [查看手机图](map-design/assets/cities/shanghai-mobile.png) · 江岸夜蓝、深水蓝、暖灯色 |
+| **成都 · 茶馆与街巷** | **厦门 · 海岸与老城** |
+| ![成都桌面地图](map-design/assets/cities/chengdu-desktop.png) | ![厦门桌面地图](map-design/assets/cities/xiamen-desktop.png) |
+| [查看手机图](map-design/assets/cities/chengdu-mobile.png) · 茶纸色、公园绿、茶绿 | [查看手机图](map-design/assets/cities/xiamen-mobile.png) · 沙色、海蓝、海岸青 |
+
+[查看全部参考图与配色说明](map-design/references/city-examples.md)。这些是设计示例，点位为OSM代表位置；坐标和来源见 [`data.js`](examples/city-maps/data.js)。
+
+### 本地打开互动示例
+
+在仓库根目录运行：
+
+```sh
+python3 -m http.server 8080 --bind 127.0.0.1
+```
+
+打开 [城市地图示例](http://127.0.0.1:8080/examples/city-maps/?city=suzhou)，可切换城市、主题与分类，搜索全部点位并缩放地图。页面使用仓库内的MapLibre运行时，底图需要联网；不需要安装前端依赖或构建。
+
 ## 包含的资源
 
 | 文件 | 用途 |
@@ -53,8 +77,10 @@
 | `map-design/agents/openai.yaml` | 技能显示名称与默认提示 |
 | `map-design/references/design-system.md` | 布局、颜色、尺寸与参考截图 |
 | `map-design/references/implementation.md` | 点位数据、标签避让、状态和部署约定 |
+| `map-design/references/city-examples.md`、`map-design/assets/cities/` | 4城配色说明及8张桌面/手机参考图 |
 | `map-design/assets/select-visible-places.mjs` | 按编辑优先级和屏幕距离选择可见地点 |
 | `map-design/assets/map-tokens.css` | 可按城市调整的浅深主题配色变量 |
+| `examples/city-maps/`、`examples/vendor/` | 可复现参考图的互动示例、地图运行时与第三方许可 |
 
 ## 许可与来源
 

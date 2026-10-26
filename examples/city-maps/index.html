@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f3f1e9">
+  <title>城市地图设计参考</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../vendor/maplibre-gl.css">
+  <link rel="stylesheet" href="./app.css">
+  <script src="./app.js" type="module"></script>
+</head>
+<body>
+  <main id="map" aria-label="城市参考地图"></main>
+  <header class="topbar">
+    <label class="city-control"><span class="sr-only">选择参考城市</span><select id="city-select"></select></label>
+    <form id="search-form" class="search-box" role="search"><span data-icon="search"></span><input id="search" type="search" aria-label="搜索地点" autocomplete="off" aria-controls="search-results" aria-expanded="false"><button id="clear-search" type="button" aria-label="清空搜索" hidden>×</button></form>
+  </header>
+  <button id="theme-toggle" class="map-button theme-toggle" aria-label="切换主题"><span data-icon="moon"></span></button>
+  <button id="about-toggle" class="map-button about-toggle" aria-label="参考图与数据来源"><span data-icon="info"></span></button>
+  <section id="search-panel" class="search-panel" aria-label="地点搜索结果" hidden><p id="search-caption"></p><div id="search-results"></div></section>
+  <div class="city-caption" aria-hidden="true"><strong id="city-name"></strong><span id="city-subtitle"></span></div>
+  <div class="map-controls"><button id="fit-map" class="map-button" aria-label="查看全部地点"><span data-icon="layers"></span></button><div class="zoom-control"><button id="zoom-in" aria-label="放大地图">+</button><button id="zoom-out" aria-label="缩小地图">−</button></div></div>
+  <nav id="categories" class="category-dock" aria-label="地点分类"></nav>
+  <p id="map-status" class="map-status" role="status">正在载入底图</p>
+  <dialog id="about-dialog"><header><h2>关于这张参考图</h2><button id="close-about" aria-label="关闭说明">×</button></header><p>这是地图设计 skill 的简洁示例，展示城市配色、精选地点、缩放避让和手机介绍气泡。</p><p>点位使用 OpenStreetMap 的 WGS84 代表位置，核对于2026年10月26日。道路、街区与景区标记不等于实际入口。</p><div id="about-sources"></div><p class="small">底图与地图数据：OpenFreeMap / OpenMapTiles / OpenStreetMap contributors。地图数据采用 ODbL；示例代码采用 MIT。</p></dialog>
+</body>
+</html>

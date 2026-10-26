@@ -25,6 +25,8 @@ description: "Design or refine map-first city tourism, neighborhood, and campus 
 
 制作界面时阅读 [设计参数与杭州示例](references/design-system.md)。新城市保留布局关系，重新选择符合当地气质的颜色，不固定沿用中大或杭州配色。
 
+比较不同城市配色和桌面/手机布局时，可阅读 [苏州、上海、成都与厦门参考图](references/city-examples.md)。这些是少量精选点位的设计示例，不是完整城市数据清单。
+
 ## 最重要的缩放规则
 
 **附近多个地点挤在一起时，只显示更出名、更有代表性的那个。** 默认不用数字聚合圆点，也不把所有标签硬挤在画面上。
